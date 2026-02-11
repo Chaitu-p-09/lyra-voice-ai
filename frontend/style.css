@@ -1,0 +1,109 @@
+:root {
+  --bg: #090c14;
+  --card: #141a2a;
+  --accent: #6d8bff;
+  --accent-strong: #4f70ff;
+  --text: #ecf1ff;
+  --muted: #a7b3d6;
+  --good: #3fd18b;
+  --thinking: #ffce5b;
+  --danger: #ff7b8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Inter, Segoe UI, Roboto, system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top, #1a2440 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.app {
+  width: min(92vw, 480px);
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent), var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.4rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.card__header h1 {
+  margin: 0;
+  letter-spacing: 0.08em;
+}
+
+.tagline {
+  margin: 0.4rem 0 1.1rem;
+  color: var(--muted);
+}
+
+.status-panel {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.status-panel p {
+  margin: 0;
+}
+
+.mic-btn {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem;
+  transition: transform 140ms ease, background 140ms ease, box-shadow 140ms ease;
+}
+
+.mic-btn:hover {
+  background: var(--accent-strong);
+}
+
+.mic-btn:active {
+  transform: scale(0.99);
+}
+
+.mic-btn.listening {
+  background: var(--good);
+  box-shadow: 0 0 0 4px rgba(63, 209, 139, 0.2);
+}
+
+.mic-btn.thinking {
+  background: var(--thinking);
+  color: #1d1d1d;
+}
+
+.mic-btn.error {
+  background: var(--danger);
+}
+
+.mic-icon {
+  font-size: 1.15rem;
+}
+
+.hint {
+  margin: 0.95rem 0 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
