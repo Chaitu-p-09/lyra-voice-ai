@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LYRA Voice Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="LYRA voice assistant">
+      <section class="card">
+        <header class="card__header">
+          <h1>LYRA</h1>
+          <p class="tagline">Voice-only assistant for Chaitu</p>
+        </header>
+
+        <div class="status-panel" role="status" aria-live="polite">
+          <p><strong>Status:</strong> <span id="statusText">Idle</span></p>
+          <p><strong>Speaker:</strong> <span id="speakerText">Chaitu</span></p>
+          <p><strong>Mode:</strong> <span id="modeText">CHILL</span></p>
+        </div>
+
+        <button id="micButton" class="mic-btn" aria-label="Start listening">
+          <span class="mic-icon">🎙</span>
+          <span class="mic-label">Tap to Speak</span>
+        </button>
+
+        <p class="hint">
+          Say commands like “Riya wants to talk”, “I am back”, or “Switch to study mode”.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
